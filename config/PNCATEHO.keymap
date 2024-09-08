@@ -12,6 +12,22 @@
 &mt { quick_tap_ms = <200>; };
 
 / {
+    macros {
+        rcwt: rcwt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp R &kp C &kp W &kp T>;
+            label = "RCWT";
+        };
+
+        rcnt: rcnt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp R &kp C &kp N &kp T>;
+            label = "RCNT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -19,8 +35,8 @@
             label = "default";
             bindings = <
 &kp LA(LS(F))  &sk LS(LA(LC(DOWN_ARROW)))  &kp LEFT_BRACE  &kp RIGHT_BRACE
-&kp LC(C)      &kp LC(V)                   &kp LC(X)       &none
-                                                           &none            &mo 1
+&kp LC(C)      &kp LC(V)                   &kp LC(X)       &rcwt
+                                                           &rcnt            &mo 1
             >;
         };
 
