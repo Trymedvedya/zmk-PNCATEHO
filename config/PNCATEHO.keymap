@@ -26,6 +26,13 @@
             bindings = <&kp R &kp C &kp N &kp T>;
             label = "RCNT";
         };
+
+        cleartemp: cleartemp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(R) &kp T &kp E &kp M &kp P &kp ENTER &kp LC(A) &kp LS(DEL) &kp LC(LS(W))>;
+            label = "CLEARTEMP";
+        };
     };
 
     keymap {
@@ -43,9 +50,9 @@
         lower_layer {
             label = "lower";
             bindings = <
-&kp Z  &kp X  &kp C  &kp V
-&none  &none  &none  &none
-                     &mo 1  &mo 0
+&kp Z       &kp X  &kp C  &kp V
+&cleartemp  &none  &none  &none
+                          &mo 1  &mo 0
             >;
         };
     };
