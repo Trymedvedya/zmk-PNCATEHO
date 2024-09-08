@@ -34,9 +34,9 @@
         default_layer {
             label = "default";
             bindings = <
-&kp LA(LS(F))  &kp LS(LA(LC(DOWN_ARROW)))  &kp LEFT_BRACE  &kp LC(Z)
-&kp LC(C)      &kp LC(V)                   &kp LC(X)       &rcwt
-                                                           &mo 0      &mo 1
+&kp LA(LS(F))  &kp LS(LA(LC(DOWN_ARROW)))  &kp LA(DOWN_ARROW)  &kp LA(UP_ARROW)
+&kp LC(C)      &kp LC(V)                   &kp LC(X)           &kp LC(Z)
+                                                               &mo 0             &mo 1
             >;
         };
 
